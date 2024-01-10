@@ -1,13 +1,28 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+    overflow: auto;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    background-color: #ffffff; /* Initial background color */
 }
 
-body.transitioning {
-    opacity: 0;
+@keyframes wave-transition {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .header {
@@ -158,10 +173,12 @@ body.transitioning {
     opacity: 1;
 }
 
+/* Your existing styles */
+
 .github-repo {
     text-align: center;
     position: fixed;
-    bottom: 10px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     background-color: #000000;
@@ -170,13 +187,20 @@ body.transitioning {
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.8vw;
-    color: transparent; /* Make the text transparent initially */
+    color: transparent;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     box-shadow: 0 0 0.3rem black;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Add transitions for smoother effect */
+    transition: opacity 0.5s ease; /* Add transition for smoother effect */
 }
+
+.github-repo.hidden {
+    opacity: 0;
+}
+
+/* Other styles remain unchanged */
+
 
 .github-repo:hover {
     background-color: #ffffff; /* Change background to white on hover */
@@ -186,3 +210,39 @@ body.transitioning {
 .github-repo p a {
     color: inherit; /* Inherit text color from parent for link */
 }
+.sidebar-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 2vw;
+    box-shadow: 0 0 0.3rem black;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 1vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add transition for smoother effect */
+}
+
+.sidebar li:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transform: scale(1.05); /* Apply a small-scale zoom on hover */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px; /* Adjust as needed */
+}
+
+/* Other styles remain unchanged */
