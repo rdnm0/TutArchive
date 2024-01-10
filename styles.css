@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw; /* Use viewport width for padding */
+    background-color: #seagreen;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2vw;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 1vw;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1vw; /* Reduced padding */
+    z-index: 100;
+}
+
+.nav-button {
+    background-color: #seagreen;
+    color: black;
+    padding: 0.8vw 1.4vw; /* Reduced button size */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1vw; /* Reduced font size */
+    margin-left: 0.5vw;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 0 0.3rem black;
+}
+
+.nav-button:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+    color: white;
+}
+
+.learn-text {
+    font-size: 3vw; /* Adjusted font size using viewport units */
+    color: #000000;
+    animation: wave 1s infinite;
+    font-weight: bold;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.welcome-text {
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.welcome-text h1 {
+    font-size: 5vw; /* Adjusted font size */
+    margin-bottom: 0.5vw; /* Adjusted margin */
+    font-weight: bold;
+    color: #333; /* Changed heading color */
+}
+
+.welcome-text p {
+    font-size: 3vw; /* Adjusted font size */
+    color: #777; /* Changed paragraph color */
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add this new style for "tutarchive" class */
+.tutarchive {
+    color: #000000; /* Change the color as desired */
+    position: relative; /* Positioning for the text box */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Add this new style for the text box */
+.tutarchive::before {
+    content: "tutorial-archive"; /* Set the desired text content */
+    position: absolute;
+    top: 50%; /* Position it in the middle vertically */
+    left: 50%; /* Position it in the middle horizontally */
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* Background color of the text box */
+    border: 2px solid #ccc; /* Border of the text box */
+    border-radius: 10px; /* Border radius of the text box */
+    padding: 10px; /* Adjust padding as needed */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Slow fade-in transition effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif; /* Set the desired font-family */
+    font-size: 14px; /* Set the desired font size */
+}
+
+.tutarchive:hover::before {
+    opacity: 1;
+}
+
+
