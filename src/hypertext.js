@@ -1,16 +1,11 @@
-
-function toggleRepoLink() {
-    var repoLink = document.getElementById("repoLink");
-    repoLink.style.display = (repoLink.style.display === "none" || repoLink.style.display === "") ? "block" : "none";
-}
 document.addEventListener('DOMContentLoaded', function () {
-    var htmlButton = document.querySelector('.nav-button');
+    var homeButton = document.querySelector('.nav-button');
 
-    htmlButton.addEventListener('click', function (event) {
+    homeButton.addEventListener('click', function (event) {
         event.preventDefault();
         document.body.classList.add('transitioning');
         setTimeout(function () {
-            window.location.href = 'hypertext.html';
+            window.location.href = 'index.html';
         }, 500);
     });
 
@@ -20,4 +15,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
