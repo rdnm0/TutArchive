@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vw; /* Use viewport width for padding */
+    padding: 2vw;
     background-color: #seagreen;
     position: fixed;
     top: 0;
@@ -36,18 +36,18 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    padding: 1vw; /* Reduced padding */
+    padding: 1vw;
     z-index: 100;
 }
 
 .nav-button {
     background-color: #seagreen;
     color: black;
-    padding: 0.8vw 1.4vw; /* Reduced button size */
+    padding: 0.8vw 1.4vw;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 1.1vw; /* Reduced font size */
+    font-size: 1.1vw;
     margin-left: 0.5vw;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
@@ -63,7 +63,7 @@ body {
 }
 
 .learn-text {
-    font-size: 3vw; /* Adjusted font size using viewport units */
+    font-size: 3vw;
     color: #000000;
     animation: wave 1s infinite;
     font-weight: bold;
@@ -101,18 +101,17 @@ body {
 }
 
 .welcome-text h1 {
-    font-size: 5vw; /* Adjusted font size */
-    margin-bottom: 0.5vw; /* Adjusted margin */
+    font-size: 5vw;
+    margin-bottom: 0.5vw;
     font-weight: bold;
-    color: #333; /* Changed heading color */
+    color: #333;
 }
 
 .welcome-text p {
-    font-size: 3vw; /* Adjusted font size */
-    color: #777; /* Changed paragraph color */
+    font-size: 3vw;
+    color: #777;
 }
 
-/* Keyframes for fadeIn animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -124,35 +123,31 @@ body {
     }
 }
 
-/* Add this new style for "tutarchive" class */
 .tutarchive {
-    color: #000000; /* Change the color as desired */
-    position: relative; /* Positioning for the text box */
-    cursor: pointer; /* Change cursor on hover */
+    color: #000000;
+    position: relative;
+    cursor: pointer;
 }
 
-/* Add this new style for the text box */
 .tutarchive::before {
-    content: "tutorial-archive"; /* Set the desired text content */
+    content: "tutorial-archive";
     position: absolute;
-    top: 50%; /* Position it in the middle vertically */
-    left: 50%; /* Position it in the middle horizontally */
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff; /* Background color of the text box */
-    border: 2px solid #ccc; /* Border of the text box */
-    border-radius: 10px; /* Border radius of the text box */
-    padding: 10px; /* Adjust padding as needed */
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
     opacity: 0;
-    transition: opacity 0.5s ease; /* Slow fade-in transition effect */
+    transition: opacity 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif; /* Set the desired font-family */
-    font-size: 14px; /* Set the desired font size */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 .tutarchive:hover::before {
     opacity: 1;
 }
-
-
