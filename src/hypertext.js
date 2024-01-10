@@ -23,17 +23,17 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('wave-transition');
         setTimeout(function () {
             window.location.href = 'hypertext.html';
-        }, 1000); // Adjust the duration as needed
+        }, 1000);
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
-    // Additional JavaScript for hypertext.html can be added here
+
 });
 document.addEventListener('DOMContentLoaded', function () {
-    // Additional JavaScript for hypertext.html can be added here
+
 });
 document.addEventListener('DOMContentLoaded', function () {
-    // Additional JavaScript for hypertext.html can be added here
+
 });
 document.addEventListener('DOMContentLoaded', function () {
     var homeButton = document.querySelector('.home-button');
@@ -52,28 +52,24 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('wave-transition');
         setTimeout(function () {
             window.location.href = 'hypertext.html';
-        }, 1000); // Adjust the duration as needed
+        }, 1000);
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
-    // Your existing JavaScript code
 
     var repoLink = document.getElementById('repoLink');
-    
-    // Function to toggle the class 'hidden' based on scroll position
+
     function toggleRepoVisibility() {
         var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-        if (scrollPosition > 100) { // Adjust the scroll position threshold as needed
+        if (scrollPosition > 100) {
             repoLink.classList.add('hidden');
         } else {
             repoLink.classList.remove('hidden');
         }
     }
 
-    // Add event listener for scroll
     window.addEventListener('scroll', toggleRepoVisibility);
 
-    // Call the function once to handle initial scroll position
     toggleRepoVisibility();
 });

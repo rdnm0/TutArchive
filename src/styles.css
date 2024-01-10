@@ -4,7 +4,7 @@ body {
     overflow: auto;
     opacity: 1;
     transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
-    background-color: #ffffff; /* Initial background color */
+    background-color: #ffffff; 
 }
 
 @keyframes wave-transition {
@@ -173,7 +173,7 @@ body {
     opacity: 1;
 }
 
-/* Your existing styles */
+
 
 .github-repo {
     text-align: center;
@@ -192,23 +192,23 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     box-shadow: 0 0 0.3rem black;
-    transition: opacity 0.5s ease; /* Add transition for smoother effect */
+    transition: opacity 0.5s ease; 
 }
 
 .github-repo.hidden {
     opacity: 0;
 }
 
-/* Other styles remain unchanged */
+
 
 
 .github-repo:hover {
-    background-color: #ffffff; /* Change background to white on hover */
-    color: #000000; /* Change text color to black on hover */
+    background-color: #ffffff;
+    color: #000000; 
 }
 
 .github-repo p a {
-    color: inherit; /* Inherit text color from parent for link */
+    color: inherit; 
 }
 .sidebar-container {
     display: flex;
@@ -231,18 +231,14 @@ body {
 .sidebar li {
     padding: 1vw;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add transition for smoother effect */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /
 }
 
 .sidebar li:hover {
     background-color: #000000;
     color: #ffffff;
-    transform: scale(1.05); /* Apply a small-scale zoom on hover */
-}
+    transform: scale(1.05); 
 
 .content {
     flex-grow: 1;
-    padding: 20px; /* Adjust as needed */
-}
-
-/* Other styles remain unchanged */
+    padding: 20px; 

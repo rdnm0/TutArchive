@@ -1,4 +1,3 @@
-
 function toggleRepoLink() {
     var repoLink = document.getElementById("repoLink");
     repoLink.style.display = (repoLink.style.display === "none" || repoLink.style.display === "") ? "block" : "none";
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('wave-transition');
         setTimeout(function () {
             window.location.href = 'hypertext.html';
-        }, 1000); // Adjust the duration as needed
+        }, 1000);
     });
 
     document.body.addEventListener('transitionend', function (event) {
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('scale-transition');
         setTimeout(function () {
             window.location.href = 'hypertext.html';
-        }, 1000); // Adjust the duration as needed
+        }, 1000);
     });
 
     document.body.addEventListener('transitionend', function (event) {
@@ -62,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('color-transition');
         setTimeout(function () {
             window.location.href = 'hypertext.html';
-        }, 1000); // Adjust the duration as needed
+        }, 1000);
     });
 
     document.body.addEventListener('transitionend', function (event) {
@@ -74,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     var sidebar = document.getElementById('sidebar');
 
-    // Function to check if the user has scrolled down and show the sidebar
     function showSidebar() {
         if (window.scrollY > 50) {
             sidebar.classList.add('show');
@@ -83,8 +81,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Attach the showSidebar function to the scroll event
     window.addEventListener('scroll', showSidebar);
 });
-
-
