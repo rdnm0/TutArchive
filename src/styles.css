@@ -152,3 +152,33 @@ body {
     opacity: 1;
 }
 
+.github-repo {
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    padding: 0.5vw 1vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8vw;
+    color: transparent; /* Make the text transparent initially */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 0 0.3rem black;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Add transitions for smoother effect */
+}
+
+.github-repo:hover {
+    background-color: #ffffff; /* Change background to white on hover */
+    color: #000000; /* Change text color to black on hover */
+}
+
+.github-repo p a {
+    color: inherit; /* Inherit text color from parent for link */
+}
+
+/* ... (rest of the styles remain unchanged) ... */
