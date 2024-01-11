@@ -3,8 +3,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow: auto;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
-    background-color: #ffffff; 
+    transition: opacity 0.5s ease-in-out, 
+    background: url('./assets/background.jpg') center/cover no-repeat fixed; 
 }
 
 @keyframes wave-transition {
@@ -29,8 +29,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vw;
-    background-color: #seagreen;
+    padding: 2.75vw;
+    background-color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -244,3 +244,52 @@ body {
 .content {
     flex-grow: 1;
     padding: 20px; 
+}
+
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    background: url('./background.jpg') center/cover no-repeat fixed;
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+/* Update this in your existing CSS */
+.content {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Set the height of the content area to full viewport height */
+}
+
+
+.placeholder {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(0.8);
+    padding: 20px;
+    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
+    opacity: 1;
+    background-color: #000000; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    border-radius: 8px; 
+    text-align: right; 
+}
+
+.show-placeholder {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+.placeholder-box {
+    max-width: 400px; 
+    margin: 0 auto; 
+}

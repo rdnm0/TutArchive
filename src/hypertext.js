@@ -73,3 +73,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
     toggleRepoVisibility();
 });
+document.addEventListener('DOMContentLoaded', function () {
+    var placeholders = document.querySelectorAll('.placeholder');
+
+    // Hide all placeholders initially
+    placeholders.forEach(function (placeholder) {
+        placeholder.style.display = 'none';
+    });
+
+    var sidebarButtons = document.querySelectorAll('.sidebar li');
+
+    sidebarButtons.forEach(function (button, index) {
+        button.addEventListener('click', function () {
+            // Hide all placeholders
+            placeholders.forEach(function (placeholder) {
+                placeholder.style.display = 'none';
+            });
+
+            // Show the corresponding placeholder
+            placeholders[index].style.display = 'block';
+
+            // Trigger a reflow before applying the transition class
+            void placeholders[index].offsetWidth;
+
+            // Add a class to apply the transition
+            placeholders[index].classList.add('show-placeholder');
+        });
+
+        window.addEventListener('scroll', function() {
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            const opacity = scrollPosition / scrollHeight;
+        
+            const sidebarContainer = document.querySelector('.sidebar-container');
+            const elements = sidebarContainer.children;
+        
+            for(let i = 0; i < elements.length; i++) {
+                elements[i].style.opacity = opacity;
+            }
+        });
+    });
+});
