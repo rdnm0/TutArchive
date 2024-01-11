@@ -29,8 +29,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vw;
-    background-color: #seagreen;
+    padding: 2.75vw;
+    background-color: white;
     position: fixed;
     top: 0;
     left: 0;

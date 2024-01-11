@@ -99,5 +99,18 @@ document.addEventListener('DOMContentLoaded', function () {
             // Add a class to apply the transition
             placeholders[index].classList.add('show-placeholder');
         });
+
+        window.addEventListener('scroll', function() {
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            const opacity = scrollPosition / scrollHeight;
+        
+            const sidebarContainer = document.querySelector('.sidebar-container');
+            const elements = sidebarContainer.children;
+        
+            for(let i = 0; i < elements.length; i++) {
+                elements[i].style.opacity = opacity;
+            }
+        });
     });
 });
