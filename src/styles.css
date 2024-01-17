@@ -260,13 +260,12 @@ body {
     height: 100%;
     background: rgba(255, 255, 255, 0.7);
 }
-/* Update this in your existing CSS */
+
 .content {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    height: 100vh; /* Set the height of the content area to full viewport height */
-}
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
 
 
 .placeholder {
