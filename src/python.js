@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Show the corresponding placeholder
             placeholders[index].style.display = 'block';
 
-            // Trigger a reflow before applying the transition class
+            
             void placeholders[index].offsetWidth;
 
             // Add a class to apply the transition
